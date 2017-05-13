@@ -23,5 +23,11 @@ class Ball{
     void move(){
        x = x + changeInX;
        y = y + changeInY;
+       if(x < 0 || x > 500){
+         changeInX = -1 * changeInX; 
+       }
+       if(y < 0 || y > 500){
+         changeInY = -1 * changeInY;
+       }
     }
 }
