@@ -6,7 +6,6 @@ class Ball{
     int x;
     int y;
     int expandOrShrink;//-1 shrink, 0 nothing, 1 expand
-    boolean reacting;
     
     Ball(){
        size = 15;
@@ -16,7 +15,6 @@ class Ball{
        x = int(random(500));
        y = int(random(500));
        expandOrShrink = 0;
-       reacting = false;
        drawBall();
     }
     void drawBall(){

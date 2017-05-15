@@ -18,12 +18,13 @@ void draw(){
       for(Ball ball : balls){
         if(ball.expandOrShrink != 0){
           for(Ball otherBall : balls){
-            //infect
+            //collision detection
             int radA = ball.size;
             int radB = otherBall.size;
-            int dist = 
+            int dist = (ball.x-otherBall.x)*(ball.x-otherBall.x)+(ball.y-otherBall.y)*(ball.y-otherBall.y);
             if((radA+radB)*(radA+radB) < dist){
-              
+              //within reach to infect
+	      otherBall.expandOrShrink = 1;
             }
           }
         }
