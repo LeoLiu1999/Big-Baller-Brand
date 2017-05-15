@@ -15,7 +15,19 @@ void draw(){
   for (int x = 0; x < balls.length; x++){
     balls[x].move();
     if(reactionStarted){
-      balls[x].detectCollision();
+      for(Ball ball : balls){
+        if(ball.expandOrShrink != 0){
+          for(Ball otherBall : balls){
+            //infect
+            int radA = ball.size;
+            int radB = otherBall.size;
+            int dist = 
+            if((radA+radB)*(radA+radB) < dist){
+              
+            }
+          }
+        }
+      }
     }
     if(balls[x].size == 0){//time to die
        balls[x] = null; 
